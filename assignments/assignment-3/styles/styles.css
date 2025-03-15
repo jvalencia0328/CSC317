@@ -1,0 +1,286 @@
+:root {
+  /*Colors*/
+  --clr-dark: #020617;
+  --clr-light: #ffffff;
+  --clr-h: #008080;
+  --clr-border: #D3D3D3;
+  --clr-link: #0000ff ;
+  --clr-hover:  #10b431d2;
+}
+
+header {
+  background-color: var(--clr-light);
+  text-align: center;
+  padding-top: 10px 0;
+
+  
+  
+}
+
+header img{
+
+  width: 150px;
+  height: auto;
+
+}
+
+header h1{
+  font-size: 50px;
+  color:var(--clr-dark);
+  margin-bottom: 20px;
+}
+
+body {
+background-color: var(--clr-dark);
+color: var(--clr-light);
+
+}
+
+#about-me {
+  padding:20px;
+  margin: 20px auto;
+  width:300px;
+  height:auto;
+  text-align: start;
+
+  /*Typography*/
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+
+  
+}
+#about-me img{
+  width: 300px;
+  height: auto;
+}
+
+#about-me h2{
+  border: 5px solid var(--clr-border);
+  padding: 10px;
+  width:150px;
+  height:auto;
+  font-size: 25px;
+  text-align: center;
+}
+
+
+
+
+nav {
+  text-align: center;
+  margin-bottom: 50px;
+
+}
+
+nav a{
+  font-size: 16px;
+  color: var(--clr-link);
+  padding: 10px 15px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  margin: 0 10px;
+
+}
+
+nav a:hover {
+  color:var(--clr-hover);
+  transform: translateY(-30px);
+}
+
+#education h2{
+  border: 5px solid var(--clr-border);
+  padding: 10xp;
+  width: 150px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.education-container{
+  display: flex;
+  
+  justify-content: space-evenly;
+
+  align-items: flex-start;
+  
+}
+
+.education-courses td {
+  line-height: 1.6;
+  padding: 10px;
+
+  width: 250px;
+  height: auto;
+}
+
+.education-courses th {
+  text-align:center;
+  font-size: 25px;
+  padding: 10xp;
+  border: 5px solid var(--clr-border);
+  width: 150px;
+   
+}
+
+
+#experience {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 900px;
+}
+
+.experience-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+}
+
+#projects {
+  padding: 20px;
+
+  
+}
+
+.project-card a {
+  color: var(--clr-link); 
+  text-decoration: none; 
+  font-size: 18px; 
+  transition: color 0.3s ease; 
+}
+
+#projects h2{
+  text-align: center;
+  font-size: 32px;
+
+  margin-bottom: 25px;
+}
+
+
+.project-card a:hover {
+  color:var(--clr-hover);  
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px red;
+}
+
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.social-link {
+  text-decoration: none;
+  color: var(--clr-light);
+  transition: color 0.3s ease, transform 0.3s ease;
+  padding: 10px;
+  display: inline-block;
+}
+
+
+.social-link:hover {
+  color: var(--clr-link); 
+  transform: translateY(-5px); 
+}
+
+
+#contact{
+  padding: 35px;
+  margin: 50px auto;
+  border-radius: 20xp;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  
+  header h1 {
+    font-size: 36px;
+  }
+
+  #about-me {
+    width: 100%;
+    padding: 10px;
+  }
+
+  #about-me img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  #education, #experience {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .education-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .education-courses td, .education-courses th {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .experience-container {
+    grid-template-columns: 1fr; 
+  }
+
+  #projects {
+    padding: 10px;
+  }
+
+  .project-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .social-link {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  #contact {
+    padding: 25px;
+  }
+
+  iframe {
+    width: 100%;
+    height: auto;
+  }
+
+  
+  form input, form textarea, form button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+  }
+
+  form button {
+    cursor: pointer;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

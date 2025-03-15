@@ -1,0 +1,485 @@
+/* 
+ * HYBRID.CSS
+ * A combined solution taking the best elements from both ai-1.css and ai-2.css
+ * with optimizations and improvements.
+ */
+
+
+ :root {
+    /* Color scheme with light/dark mode options */
+    --color-background: #f4f4f9; /* From ai-1.css */
+    --color-background-alt: #ffffff; /* From ai-1.css (implied in sections) */
+    --color-text: #333; /* From ai-1.css */
+    --color-primary: #0077cc; /* From ai-1.css */
+    --color-secondary: #ff6600; /* From ai-1.css */
+    --color-accent: #ff6600; /* Standardized naming from ai-2.css */
+    --color-hover: #0055aa; /* From ai-1.css */
+    --color-subtle: #ddd; /* From ai-1.css, renamed from border */
+    --color-shadow: rgba(0, 0, 0, 0.1); /* From ai-1.css */
+    
+    /* Spacing variables - From ai-2.css */
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    
+    /* Other variables - Combined */
+    --font-main: 'Arial', sans-serif; /* From ai-1.css */
+    --border-radius: 8px; /* From ai-1.css project cards */
+    --transition: all 0.3s ease; /* From ai-2.css, more consistent naming */
+    --max-width: 1200px; /* From ai-2.css */
+    
+    /* Support for dark mode with CSS variables */
+    --shadow-strength: 0.1;
+  }
+  
+  /* Dark mode support - New improvement */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-background: #000000; /* From ai-2.css */
+      --color-background-alt: #111111; /* From ai-2.css */
+      --color-text: #ffffff; /* From ai-2.css */
+      --color-subtle: #333333; /* From ai-2.css */
+      --shadow-strength: 0.3;
+      --color-shadow: rgba(0, 0, 0, var(--shadow-strength));
+    }
+  }
+  
+  /* 
+   * Global Reset and Base Styles 
+   * From ai-2.css: More comprehensive reset
+   */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: var(--font-main);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  /* 
+   * Typography - From ai-2.css with improved hierarchy 
+   */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-sm);
+    letter-spacing: 0.5px;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    letter-spacing: 1px;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-primary); /* From ai-1.css */
+    position: relative;
+  }
+  
+  /* Decorative element for h2 - From ai-2.css */
+  h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-accent);
+    margin-top: 0.5rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  /* 
+   * Links - Combined approach with hover effects from ai-2.css 
+   */
+  a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: var(--transition);
+    position: relative;
+    font-weight: bold; /* From ai-1.css */
+  }
+  
+  a:hover {
+    color: var(--color-hover);
+  }
+  
+  /* Improved link styling from ai-2.css */
+  nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--color-accent);
+    transition: var(--transition);
+  }
+  
+  nav a:hover::after {
+    width: 100%;
+  }
+  
+  /* Images - From ai-2.css */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* 
+   * Layout - From ai-2.css with improvements 
+   */
+  section {
+    padding: var(--spacing-lg) 0;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    width: 90%;
+  }
+  
+  /* 
+   * Component: Content Sections - From ai-1.css with enhancements
+   */
+  .content-section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: var(--color-background-alt);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px var(--color-shadow);
+    /* Animation from ai-2.css */
+    animation: fadeIn 0.8s ease forwards;
+  }
+  
+  /* 
+   * Header Styles - Combined approach
+   */
+  header {
+    background: var(--color-primary); /* From ai-1.css */
+    color: white;
+    text-align: center;
+    padding: var(--spacing-lg) 0;
+    position: relative; /* From ai-2.css */
+  }
+  
+  header h1 {
+    font-size: 36px; /* From ai-1.css */
+  }
+  
+  /* Decorative element from ai-2.css */
+  header::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border: 2px solid var(--color-accent);
+    opacity: 0.6;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    z-index: 0;
+  }
+  
+  /* 
+   * Navigation - Combined approach with sticky navigation from ai-2.css
+   */
+  nav {
+    display: flex;
+    justify-content: center;
+    background: var(--color-secondary);
+    padding: 10px 0;
+    position: sticky; /* From ai-2.css */
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    border-top: 1px solid var(--color-subtle); /* From ai-2.css */
+    border-bottom: 1px solid var(--color-subtle); /* From ai-2.css */
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: var(--transition);
+    text-transform: uppercase; /* From ai-2.css */
+    letter-spacing: 1px; /* From ai-2.css */
+    padding: 0.5rem 0; /* From ai-2.css */
+  }
+  
+  /* Main content - From ai-1.css with max-width from ai-2.css */
+  main {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 20px;
+  }
+  
+  /* 
+   * Project Cards - Combined with hover effects from both
+   */
+  .projects-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+  
+  @media (min-width: 768px) {
+    .projects-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .projects-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .project-card {
+    background-color: var(--color-background-alt);
+    border: 1px solid var(--color-subtle); /* From ai-1.css */
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px var(--color-shadow);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Bottom accent bar - From ai-2.css */
+  .project-card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--color-accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: var(--transition);
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px); /* From both */
+    box-shadow: 0 6px 12px var(--color-shadow); /* From ai-1.css with variable */
+  }
+  
+  .project-card:hover::after {
+    transform: scaleX(1);
+  }
+  
+  .project-card a {
+    display: inline-block;
+    margin-top: var(--spacing-sm);
+    color: var(--color-primary);
+    position: relative;
+  }
+  
+  /* Arrow animation - From ai-2.css */
+  .project-card a::after {
+    content: '→';
+    margin-left: 0.5rem;
+    transition: var(--transition);
+  }
+  
+  .project-card a:hover::after {
+    margin-left: 0.75rem;
+  }
+  
+  /* 
+   * Contact Form - Combined from both
+   */
+  .contact-form {
+    background-color: var(--color-background-alt); /* From ai-2.css */
+    padding: var(--spacing-md); /* From ai-2.css */
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px var(--color-shadow);
+  }
+  
+  .contact-form input, 
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid var(--color-subtle);
+    border-radius: var(--border-radius);
+    background-color: var(--color-background); /* From ai-2.css */
+    color: var(--color-text); /* From ai-2.css */
+    transition: var(--transition);
+  }
+  
+  /* Focus states - From ai-2.css */
+  .contact-form input:focus, 
+  .contact-form textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+  }
+  
+  /* 
+   * Buttons - Combined approach with animations from ai-2.css
+   */
+  button {
+    background: var(--color-primary);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 600; /* From ai-2.css */
+    letter-spacing: 1px; /* From ai-2.css */
+  }
+  
+  button:hover {
+    background: var(--color-hover);
+    transform: translateY(-2px); /* From ai-2.css */
+    box-shadow: 0 4px 8px var(--color-shadow);
+  }
+  
+  button:active {
+    transform: scale(0.98); /* From ai-2.css */
+  }
+  
+  /* 
+   * Footer - Combined approach
+   */
+  footer {
+    background: var(--color-secondary); /* From ai-1.css */
+    text-align: center;
+    padding: 15px;
+    color: white;
+    margin-top: var(--spacing-lg);
+    border-top: 1px solid var(--color-subtle); /* From ai-2.css */
+  }
+  
+  /* Footer text - From ai-2.css */
+  footer p {
+    font-size: 0.9rem;
+  }
+  
+  /* 
+   * Responsive Adjustments - From ai-2.css
+   */
+  @media (max-width: 767px) {
+    :root {
+      --spacing-lg: 3rem;
+      --spacing-md: 1.5rem;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+    }
+    
+    h2 {
+      font-size: 2rem;
+    }
+    
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    nav a {
+      margin: 0.5rem 0;
+    }
+    
+    .projects-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* 
+   * Animation for loading page - From ai-2.css
+   */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Sequential loading animation - From ai-2.css */
+  section:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  section:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  section:nth-child(4) {
+    animation-delay: 0.6s;
+  }
+  
+  section:nth-child(5) {
+    animation-delay: 0.8s;
+  }
+  
+  /* 
+   * Utility Classes - From ai-2.css
+   */
+  .accent-text {
+    color: var(--color-accent);
+  }
+  
+  /* Additional optimizations and improvements */
+  
+  /* Improved accessibility for focus states on all interactive elements */
+  a:focus, button:focus, input:focus, textarea:focus {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+  
+  /* Performance optimization for animations */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  
+  /* Print styles for better printed output */
+  @media print {
+    body {
+      background: white;
+      color: black;
+    }
+    
+    nav, button, .social-link {
+      display: none;
+    }
+    
+    .content-section, .project-card {
+      box-shadow: none;
+      border: 1px solid #ddd;
+      break-inside: avoid;
+    }
+    
+    a {
+      color: black;
+      text-decoration: underline;
+    }
+  }
