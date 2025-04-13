@@ -11,3 +11,4 @@ Used an unordered list for my education and an ordered list for my work experien
 Implemented a contact form with input validation.
 Embedded a Google Map iframe for my university location.
 Ensured proper HTML validation through W3C Validator.
+s

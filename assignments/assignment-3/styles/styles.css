@@ -11,24 +11,28 @@
 header {
   background-color: var(--clr-light);
   text-align: center;
-  padding-top: 10px 0;
-
   
   
-}
+  
+  
+  }
 
-header img{
+  header img{
 
-  width: 150px;
-  height: auto;
+    margin-top: 10px;
+    
+    border: 5px solid var(--clr-dark);
+  }
 
-}
+  header h1{
+    
+    color: var(--clr-dark);
+    padding: 15px;
+    margin-top: 25px;
+    width: auto;
+  }
 
-header h1{
-  font-size: 50px;
-  color:var(--clr-dark);
-  margin-bottom: 20px;
-}
+
 
 body {
 background-color: var(--clr-dark);

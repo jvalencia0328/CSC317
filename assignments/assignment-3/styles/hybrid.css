@@ -6,15 +6,15 @@
 
 
  :root {
-    /* Color scheme with light/dark mode options */
+    
     --color-background: #f4f4f9; /* From ai-1.css */
-    --color-background-alt: #ffffff; /* From ai-1.css (implied in sections) */
+    --color-background-alt: #ffffff; /* From ai-1.css 
     --color-text: #333; /* From ai-1.css */
     --color-primary: #0077cc; /* From ai-1.css */
     --color-secondary: #ff6600; /* From ai-1.css */
-    --color-accent: #ff6600; /* Standardized naming from ai-2.css */
+    --color-accent: #ff6600; /* from ai-2.css */
     --color-hover: #0055aa; /* From ai-1.css */
-    --color-subtle: #ddd; /* From ai-1.css, renamed from border */
+    --color-subtle: #ddd; /* From ai-1.css */
     --color-shadow: rgba(0, 0, 0, 0.1); /* From ai-1.css */
     
     /* Spacing variables - From ai-2.css */
@@ -28,11 +28,11 @@
     --transition: all 0.3s ease; /* From ai-2.css, more consistent naming */
     --max-width: 1200px; /* From ai-2.css */
     
-    /* Support for dark mode with CSS variables */
+    
     --shadow-strength: 0.1;
   }
   
-  /* Dark mode support - New improvement */
+  
   @media (prefers-color-scheme: dark) {
     :root {
       --color-background: #000000; /* From ai-2.css */
@@ -44,10 +44,7 @@
     }
   }
   
-  /* 
-   * Global Reset and Base Styles 
-   * From ai-2.css: More comprehensive reset
-   */
+  
   * {
     margin: 0;
     padding: 0;
@@ -168,7 +165,7 @@
   }
   
   /* 
-   * Header Styles - Combined approach
+   * Header Styles - Combined 
    */
   header {
     background: var(--color-primary); /* From ai-1.css */
@@ -199,7 +196,7 @@
   }
   
   /* 
-   * Navigation - Combined approach with sticky navigation from ai-2.css
+   * Navigation - Combined
    */
   nav {
     display: flex;
@@ -421,7 +418,7 @@
     }
   }
   
-  /* Sequential loading animation - From ai-2.css */
+  /*From ai-2.css */
   section:nth-child(2) {
     animation-delay: 0.2s;
   }
@@ -445,9 +442,7 @@
     color: var(--color-accent);
   }
   
-  /* Additional optimizations and improvements */
   
-  /* Improved accessibility for focus states on all interactive elements */
   a:focus, button:focus, input:focus, textarea:focus {
     outline: 2px solid var(--color-accent);
     outline-offset: 2px;
