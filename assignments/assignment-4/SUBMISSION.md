@@ -5,8 +5,8 @@
 
 ## 🔗 Links
 
-- **GitHub Repository:** [https://github.com/jvalencia0328/assignment-4]
-- **Live GitHub Pages URL:** [https://jvalencia0328.github.io/assignment-4]
+- **GitHub Repository:** https://github.com/jvalencia0328/CSC317.git
+- **Live GitHub Pages URL:** https://jvalencia0328.github.io/CSC317/
 
 ## 📄 Description
 
