@@ -225,14 +225,19 @@ body {
     transition: transform 0.3s ease;
 }
 .project-img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
+    width: 100%; /* Take full width of the card */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 220px; /* Limit height */
     border-radius: 10px;
     margin-bottom: 1em;
     display: block;
-    object-fit: contain;
-  }
+    object-fit: contain; /* Show the entire image without cropping */
+}
+.calculator-img {
+    width: 180px;
+    height: 180px;
+}
+
   
 
 
