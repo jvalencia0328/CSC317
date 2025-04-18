@@ -1,7 +1,7 @@
-const name = "JavaScript";
+const greeting = "JavaScript";
 
-const sayHello = (language) => {
-    return `Hello, ${language}!`;
+const createMessage = (name) => {
+    return `Hello, ${name}!`;
 };
 
-console.log(sayHello(name));
+console.log(createMessage(greeting));
