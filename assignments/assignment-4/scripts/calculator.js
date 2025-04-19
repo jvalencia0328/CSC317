@@ -53,7 +53,7 @@ function calculate() {
         case "+":
             currentInput = (prev + current).toString();
             break;
-        case "-":
+        case "−":
             currentInput = (prev - current).toString();
             break;
         case "×":
